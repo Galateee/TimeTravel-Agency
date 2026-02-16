@@ -86,8 +86,7 @@ export default function Reservation() {
                 value={formData.destination}
                 onChange={handleChange}
                 required
-                className="w-full bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm cursor-pointer"
-                style={{ paddingRight: "2.5rem" }}>
+                className="w-full bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 pr-10 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm cursor-pointer">
                 <option value="">Sélectionnez votre destination</option>
                 {destinations.map((dest) => (
                   <option key={dest.id} value={dest.id}>
@@ -120,8 +119,7 @@ export default function Reservation() {
                   value={formData.travelers}
                   onChange={handleChange}
                   required
-                  className="w-full bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm cursor-pointer"
-                  style={{ paddingRight: "2.5rem" }}>
+                  className="w-full bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 pr-10 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm cursor-pointer">
                   {[1, 2, 3, 4, 5, 6].map((num) => (
                     <option key={num} value={num}>
                       {num} {num > 1 ? "personnes" : "personne"}
