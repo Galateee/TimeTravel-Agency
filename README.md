@@ -1,108 +1,122 @@
-# TimeTravel Agency - Webapp Interactive 🚀⏰
+# ⏰ TimeTravel Agency - Webapp Interactive
 
 ![TimeTravel Agency](https://img.shields.io/badge/Status-Production-success)
 ![React](https://img.shields.io/badge/React-18.2-blue)
 ![Tailwind](https://img.shields.io/badge/Tailwind-3.4-38bdf8)
+![Mistral AI](https://img.shields.io/badge/Mistral%20AI-Chatbot-orange)
 
-Webapp moderne et immersive pour une agence de voyage temporel fictive, créée avec l'aide de l'IA générative.
+**🌐 Application déployée :** [https://timetravel-agency-seven.vercel.app](https://timetravel-agency-seven.vercel.app)
 
-## 🎯 Description
+---
 
-TimeTravel Agency est une webapp interactive qui permet aux visiteurs de découvrir et réserver des voyages vers 3 destinations temporelles fascinantes :
+## 📝 Description du Projet
 
-- **Paris 1889** - La Belle Époque et l'Exposition Universelle
-- **Crétacé -65M** - L'ère des dinosaures et la nature préhistorique
-- **Florence 1504** - La Renaissance italienne au temps de Michel-Ange
+TimeTravel Agency est une **webapp moderne et immersive** pour une agence de voyage temporel fictive. Elle permet aux visiteurs de découvrir et réserver des voyages vers **3 destinations temporelles fascinantes** :
 
-## ✨ Fonctionnalités
+- **🗼 Paris 1889** - La Belle Époque et l'Exposition Universelle
+- **🦕 Crétacé -65M** - L'ère des dinosaures et la nature préhistorique
+- **🎨 Florence 1504** - La Renaissance italienne au temps de Michel-Ange
 
-### Pages & Sections
+Ce projet a été développé dans le cadre du cours **M1/M2 Digital & IA** en utilisant des outils d'IA générative pour la conception, le design et le développement.
 
-- ✅ **Page d'accueil** avec hero section vidéo immersive
-- ✅ **Section À propos** présentant l'agence
-- ✅ **Galerie de destinations** avec cards interactives et modales détaillées
-- ✅ **Quiz personnalisé** de recommandation (4 questions)
-- ✅ **Chatbot IA** conversationnel intégré
-- ✅ **Formulaire de réservation** avec validation
-- ✅ **Design responsive** (mobile-first)
+---
 
-### Animations
+## 🛠️ Technologies Utilisées
 
-- ✅ Animations au scroll avec **Framer Motion**
-- ✅ Micro-interactions sur les boutons et cards
-- ✅ Transitions fluides entre les sections
-- ✅ Effets de hover sur les éléments interactifs
+### Frontend & Build
+
+- **React 18.2** - Bibliothèque JavaScript pour interfaces utilisateur
+- **Vite 5.1** - Build tool ultra-rapide avec HMR
+- **Tailwind CSS 3.4** - Framework CSS utility-first
+- **Framer Motion 11.0** - Librairie d'animations React
+- **Lucide React 0.344** - Icônes modernes et personnalisables
 
 ### Intelligence Artificielle
 
-- ✅ **Chatbot conversationnel** qui répond aux questions sur les destinations, prix, sécurité
-- ✅ **Système de recommandation** basé sur un quiz de préférences
-- ✅ Personnalité d'agent de voyage temporel (professionnel, passionné d'histoire)
+- **Mistral AI API** - Chatbot conversationnel avec modèle `mistral-small-latest`
+- **Algorithme de recommandation** - Quiz personnalisé avec scoring pondéré
 
-## 🛠️ Stack Technique
+### Design & UX
 
-### Frontend
+- Thème sombre premium avec accents dorés (#D4AF37)
+- Effets glassmorphism et gradients dynamiques
+- Typography : Playfair Display (serif) + Inter (sans-serif)
+- Design responsive mobile-first optimisé pour iPhone
 
-- **React** 18.2 - Framework JavaScript
-- **Vite** 5.1 - Build tool ultra-rapide
-- **Tailwind CSS** 3.4 - Framework CSS utility-first
-- **Framer Motion** 11.0 - Librairie d'animations
-- **Lucide React** - Icônes modernes
+### Déploiement
 
-### Design
+- **Vercel** - Hébergement et CI/CD automatique
+- **GitHub** - Versioning et collaboration
 
-- Thème sombre premium avec accents dorés
-- Police serif (Playfair Display) pour les titres
-- Police sans-serif (Inter) pour le corps du texte
-- Effets glassmorphism
-- Gradients dynamiques
+---
 
-### Assets
+## ✨ Fonctionnalités Implémentées
 
-- Images générées avec **IA générative** (projet TimeTravel Agency #1)
-- Vidéos créées avec **Runway Gen-4** et **Kling AI**
-- Hébergement local des assets
+### Pages & Sections Principales
 
-## 🤖 IA Utilisées
+- ✅ **Hero Section** - Vidéo immersive plein écran avec animations
+- ✅ **À Propos** - Présentation de l'agence avec valeurs et promesses
+- ✅ **Destinations** - 3 cards interactives avec modales détaillées (vidéos + infos complètes)
+- ✅ **Quiz Personnalisé** - 4 questions avec algorithme de recommandation intelligent
+- ✅ **Chatbot IA** - Assistant virtuel conversationnel propulsé par Mistral AI
+- ✅ **Formulaire de Réservation** - Validation complète avec animation de confirmation
+- ✅ **Navigation Sticky** - Header avec smooth scroll vers les sections
+- ✅ **Footer** - Informations de contact et liens réseaux sociaux
 
-### Développement
+### Fonctionnalités Avancées
 
-- **Claude 4.5 Sonnet** (via GitHub Copilot) - Génération du code complet
-- Architecture React moderne et bonnes pratiques
-- Composants réutilisables et maintenables
+- ✅ **Animations au scroll** - Apparition progressive des éléments (Framer Motion)
+- ✅ **Micro-interactions** - Effets hover, transitions fluides
+- ✅ **Modales interactives** - Split-screen avec vidéos et contenu détaillé
+- ✅ **Chatbot contextuel** - Réponses intelligentes basées sur l'historique de conversation
+- ✅ **Mode fallback** - Le chatbot fonctionne même sans clé API
+- ✅ **Responsive design** - Optimisé pour desktop, tablette et mobile (iPhone 16 Pro testé)
+- ✅ **Performance optimisée** - Lazy loading, code splitting, GPU acceleration
 
-### Chatbot IA Conversationnel
+---
 
-- **Mistral AI API** (mistral-small-latest) - IA conversationnelle
-- Intégration API avec gestion d'erreurs et mode fallback
-- Personnalité définie : agent de voyage temporel expert et passionné
-- Réponses intelligentes et contextuelles basées sur l'historique de conversation
-- Voir [MISTRAL_SETUP.md](MISTRAL_SETUP.md) pour la configuration
+## 🤖 Outils IA Utilisés
 
-### Quiz de Recommandation
+### Développement du Code
 
-- Algorithme de scoring pondéré
-- 4 questions ciblées sur les préférences
-- Recommandation personnalisée avec explication détaillée
+- **Claude 4.5 Sonnet** (via GitHub Copilot)
+  - Génération de l'architecture React complète
+  - Création des 8 composants avec bonnes pratiques
+  - Intégration Mistral AI API avec gestion d'erreurs
+  - Algorithme de quiz avec scoring personnalisé
+  - Corrections responsive pour mobile iPhone 16 Pro
+  - ~100% du code généré par IA sous supervision humaine
 
-### Assets (Projet précédent)
+### Chatbot Conversationnel
 
-- **Midjourney** - Génération des images des destinations
-- **Runway Gen-4 Turbo** - Vidéos cinématiques
-- **Kling AI** - Vidéos supplémentaires
+- **Mistral AI API** (`mistral-small-latest`)
+  - Agent conversationnel temps réel
+  - Personnalité définie : expert voyage temporel passionné d'histoire
+  - Réponses sur les 3 destinations, prix, durées, sécurité
+  - Gestion de l'historique de conversation
+  - Mode fallback avec réponses pré-définies
 
-## 📦 Installation
+### Assets & Médias (Projet antérieur)
+
+- **Midjourney** - Génération des 8 images de destinations (Paris, Crétacé, Florence)
+- **Runway Gen-4 Turbo** - Création de vidéos cinématiques
+- **Kling AI** - Génération de vidéos supplémentaires
+
+---
+
+## 📦 Installation et Lancement
 
 ### Prérequis
 
-- Node.js 18+ et npm
+- **Node.js** 18+ et npm
 
-### Étapes
+### Étapes d'installation
 
 1. **Cloner le projet**
 
 ```bash
-cd "TimeTravel Agency"
+git clone https://github.com/Galateee/TimeTravel-Agency.git
+cd TimeTravel-Agency
 ```
 
 2. **Installer les dépendances**
@@ -111,16 +125,22 @@ cd "TimeTravel Agency"
 npm install
 ```
 
-3. **Configurer l'API Mistral AI (optionnel mais recommandé)**
+3. **Configurer l'API Mistral AI (Optionnel mais recommandé)**
 
-Créez un fichier `.env` à la racine et ajoutez :
+Le chatbot utilise l'API Mistral AI pour des réponses intelligentes. Sans clé API, il fonctionne en mode fallback avec réponses pré-définies.
+
+**Obtenir une clé API gratuite :**
+
+- Créer un compte sur [console.mistral.ai](https://console.mistral.ai/)
+- Aller dans "API Keys" → "Create new key"
+- Copier la clé (affichée une seule fois)
+
+**Configuration :**
+Créez un fichier `.env` à la racine du projet :
 
 ```bash
 VITE_MISTRAL_API_KEY=votre_cle_api_ici
 ```
-
-> **Note :** Sans clé API, le chatbot fonctionne en mode fallback.  
-> Voir [MISTRAL_SETUP.md](MISTRAL_SETUP.md) pour obtenir une clé gratuite.
 
 4. **Lancer le serveur de développement**
 
@@ -134,13 +154,50 @@ npm run dev
 http://localhost:3000
 ```
 
+### Build pour production
+
+```bash
+npm run build
+```
+
+Le dossier `dist/` contiendra les fichiers optimisés prêts pour le déploiement.
+
+---
+
+## 🚀 Déploiement
+
+### Application en ligne
+
+**URL de production :** [https://timetravel-agency-seven.vercel.app](https://timetravel-agency-seven.vercel.app)
+
+### Déployer votre propre version
+
+**Via Vercel (Recommandé) :**
+
+1. Créer un compte sur [vercel.com](https://vercel.com)
+2. Importer le repository GitHub
+3. Ajouter la variable d'environnement `VITE_MISTRAL_API_KEY` dans les settings
+4. Déployer automatiquement
+
+**Alternative :**
+
+- **Netlify** : Drag & drop du dossier `dist/`
+- **GitHub Pages** : Push du dossier `dist/` sur branche `gh-pages`
+
+---
+
 ## 🏗️ Structure du Projet
 
 ```
-TimeTravel Agency/
+TimeTravel-Agency/
 ├── public/                    # Assets statiques
+│   ├── videos/               # 5 vidéos (hero + destinations)
+│   └── images/               # 8 images organisées par destination
+│       ├── paris/           # 3 images Paris 1889
+│       ├── cretace/         # 3 images Crétacé
+│       └── florence/        # 3 images Florence 1504
 ├── src/
-│   ├── components/           # Composants React
+│   ├── components/           # 8 composants React
 │   │   ├── Header.jsx       # Navigation sticky
 │   │   ├── Hero.jsx         # Section hero avec vidéo
 │   │   ├── About.jsx        # Présentation de l'agence
@@ -149,112 +206,159 @@ TimeTravel Agency/
 │   │   ├── ChatBot.jsx      # Chatbot conversationnel IA
 │   │   ├── Reservation.jsx  # Formulaire de réservation
 │   │   └── Footer.jsx       # Pied de page
+│   ├── config/
+│   │   └── mistral.js       # Configuration API Mistral
+│   ├── services/
+│   │   └── mistralService.js # Service API avec fallback
 │   ├── App.jsx              # Composant principal
 │   ├── main.jsx             # Point d'entrée
 │   └── index.css            # Styles Tailwind
-├── package.json             # Dépendances
-├── tailwind.config.js       # Configuration Tailwind
-├── vite.config.js           # Configuration Vite
-└── README.md                # Documentation
+├── .env.example              # Template des variables d'environnement
+├── package.json              # Dépendances npm
+├── tailwind.config.js        # Configuration Tailwind personnalisée
+├── vite.config.js            # Configuration Vite
+├── vercel.json               # Configuration déploiement Vercel
+└── README.md                 # Documentation (ce fichier)
 ```
+
+---
 
 ## 🎨 Composants Principaux
 
 ### Header
 
-Navigation sticky avec effet de scroll, liens de navigation smooth scroll vers les sections.
+Navigation sticky avec liens smooth scroll, effet de transparence au scroll.
 
 ### Hero
 
-Section hero plein écran avec vidéo d'arrière-plan, animations de texte progressives, CTA vers les destinations.
+Section plein écran avec vidéo background, animations texte progressives, CTA vers destinations.
+
+### About
+
+Présentation de l'agence avec 3 cards de valeurs, animations au scroll.
 
 ### Destinations
 
-Cards interactives pour les 3 époques, modal détaillé avec vidéo et informations complètes, système de hover effects.
+3 cards interactives (Paris, Crétacé, Florence) avec hover effects, modales split-screen avec vidéo + détails complets (durée, prix, points forts).
 
 ### Quiz
 
-4 questions de préférences, algorithme de recommandation intelligent, résultat personnalisé avec description détaillée.
+4 questions de préférences (ambiance, exploration, art, aventure), algorithme de scoring pondéré, résultat personnalisé avec recommandation détaillée.
 
 ### ChatBot
 
-Widget flottant en bas à droite, interface de conversation fluide, réponses contextuelles sur les destinations, prix, sécurité.
+Widget flottant en bas à gauche, interface conversationnelle fluide, intégration Mistral AI avec historique, réponses contextuelles sur destinations/prix/sécurité.
 
 ### Reservation
 
-Formulaire complet avec validation, sélection de destination et dates, message de confirmation animé.
+Formulaire complet (destination, date, voyageurs, contact), validation native HTML5 + styles personnalisés, animation de confirmation après soumission.
 
-## 🚀 Déploiement
+### Footer
 
-### Vercel (Recommandé)
-
-```bash
-npm run build
-# Déployer le dossier dist/ sur Vercel
-```
-
-### Netlify
-
-```bash
-npm run build
-# Drag & drop du dossier dist/ sur Netlify
-```
-
-### GitHub Pages
-
-```bash
-npm run build
-# Pousser le dossier dist/ sur la branche gh-pages
-```
-
-## 📊 Performances
-
-- ✅ Lazy loading des images
-- ✅ Optimisation des vidéos (compression)
-- ✅ Code splitting automatique (Vite)
-- ✅ Animations GPU-accelerated (Framer Motion)
-- ✅ Bundle size optimisé
-
-## 🎓 Contexte Pédagogique
-
-Ce projet a été réalisé dans le cadre d'un cours de **M1/M2 Digital & IA** portant sur :
-
-- L'utilisation d'outils d'IA générative pour le développement
-- La création d'interfaces modernes et interactives
-- L'intégration d'agents conversationnels
-- Les bonnes pratiques de développement web
-
-### Compétences Développées
-
-- Utilisation d'IA générative pour le code (Claude 4.5 Sonnet)
-- Architecture React et composants réutilisables
-- Design moderne avec Tailwind CSS
-- Animations fluides avec Framer Motion
-- Logique conversationnelle pour chatbot IA
-- Algorithmes de recommandation personnalisée
-
-## 📄 Crédits
-
-### Développement
-
-- **Code** : Généré avec Claude 4.5 Sonnet (GitHub Copilot)
-- **Framework** : React + Vite + Tailwind CSS
-- **Animations** : Framer Motion
-
-### Assets
-
-- **Images destinations** : Midjourney (projet TimeTravel Agency #1)
-- **Vidéos** : Runway Gen-4 Turbo + Kling AI
-- **Icônes** : Lucide React
-
-### Étudiant
-
-- **Robin Vidal** - M1/M2 Digital & IA - YNOV
-
-## 📝 Licence
-
-Projet pédagogique - Utilisation libre pour apprentissage et portfolio.
+Informations de contact, liens réseaux sociaux, crédits projet.
 
 ---
 
+## 📊 Performances & Optimisations
+
+- ✅ **Lazy loading** des images pour chargement rapide
+- ✅ **Vidéos optimisées** avec compression et autoplay muted
+- ✅ **Code splitting** automatique avec Vite
+- ✅ **Animations GPU-accelerated** via Framer Motion
+- ✅ **Bundle optimisé** : ~302KB après build
+- ✅ **Responsive design** testé sur iPhone 16 Pro
+- ✅ **Corrections mobile spécifiques** : modales adaptées, champs formulaire optimisés
+
+---
+
+## 🎓 Contexte Pédagogique
+
+Ce projet a été réalisé dans le cadre du cours **M1/M2 Digital & IA à YNOV**.
+
+### Objectifs du projet
+
+- Utiliser des outils d'IA générative pour le développement web complet
+- Créer une interface moderne et immersive avec React
+- Intégrer un agent conversationnel intelligent (Mistral AI)
+- Implémenter un système de recommandation personnalisé
+- Appliquer les bonnes pratiques de développement et déploiement
+
+### Compétences développées
+
+- 🤖 **Prompting avancé** avec Claude 4.5 Sonnet pour génération de code
+- ⚛️ **Architecture React** moderne avec composants réutilisables
+- 🎨 **Design UI/UX** avec Tailwind CSS et animations Framer Motion
+- 🧠 **Intégration IA** conversationnelle via API REST
+- 📱 **Responsive Design** et optimisations mobile spécifiques
+- 🚀 **CI/CD** avec déploiement automatique sur Vercel
+- 📝 **Documentation** open source et bonnes pratiques Git
+
+### Méthodologie de travail avec l'IA
+
+1. **Analyse des besoins** et définition architecture (avec assistance IA)
+2. **Génération itérative** des composants React avec Claude
+3. **Tests et corrections** sur navigateurs desktop et mobile réel
+4. **Optimisations responsive** suite aux tests iPhone 16 Pro
+5. **Intégration API** Mistral AI avec gestion d'erreurs robuste
+6. **Déploiement** et configuration production sur Vercel
+
+---
+
+## 📄 Crédits et Ressources
+
+### Développement
+
+- **Code Source** : Généré avec **Claude 4.5 Sonnet** (GitHub Copilot)
+- **Architecture** : React 18 + Vite + Tailwind CSS
+- **Animations** : Framer Motion 11.0
+- **Icônes** : Lucide React
+
+### Intelligence Artificielle
+
+- **Chatbot** : API **Mistral AI** (modèle `mistral-small-latest`)
+- **Génération de code** : **Claude 4.5 Sonnet** via GitHub Copilot
+- **Assistance développement** : Prompting avancé et débogage
+
+### Assets & Médias
+
+- **Images destinations** : **Midjourney** (8 images - Paris, Crétacé, Florence)
+- **Vidéos cinématiques** : **Runway Gen-4 Turbo** + **Kling AI** (5 vidéos)
+- **Hébergement assets** : Local dans `/public` (best practices)
+
+### Outils & Plateformes
+
+- **Versioning** : Git + GitHub ([Galateee/TimeTravel-Agency](https://github.com/Galateee/TimeTravel-Agency))
+- **Déploiement** : Vercel ([timetravel-agency-seven.vercel.app](https://timetravel-agency-seven.vercel.app))
+- **IDE** : Visual Studio Code avec GitHub Copilot
+
+### Étudiant
+
+- **Robin Vidal** - M1/M2 Digital & IA - YNOV Campus
+- Février 2026
+
+---
+
+## 📝 Licence
+
+Projet pédagogique réalisé dans le cadre universitaire.  
+Utilisation libre pour apprentissage, portfolio et démonstration de compétences.
+
+---
+
+## 🔗 Liens Utiles
+
+- **Application Live** : [https://timetravel-agency-seven.vercel.app](https://timetravel-agency-seven.vercel.app)
+- **Repository GitHub** : [https://github.com/Galateee/TimeTravel-Agency](https://github.com/Galateee/TimeTravel-Agency)
+- **Mistral AI Console** : [https://console.mistral.ai](https://console.mistral.ai)
+- **Documentation React** : [https://react.dev](https://react.dev)
+- **Documentation Tailwind** : [https://tailwindcss.com](https://tailwindcss.com)
+
+---
+
+<div align="center">
+
 **⏰ Voyagez à travers le temps avec élégance et sécurité ! ⏰**
+
+_Propulsé par React, Mistral AI et l'imagination humaine_ 🚀
+
+</div>
