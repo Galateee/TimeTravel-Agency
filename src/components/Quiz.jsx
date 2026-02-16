@@ -110,7 +110,7 @@ export default function Quiz({ show, onClose }) {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
-          className="bg-gradient-to-br from-gray-900 to-black rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 md:p-12 border border-gold-500/20"
+          className="bg-gradient-to-br from-gray-900 to-black rounded-3xl max-w-2xl w-full max-h-[85vh] md:max-h-[90vh] overflow-y-auto p-6 sm:p-8 md:p-12 border border-gold-500/20"
           onClick={(e) => e.stopPropagation()}>
           {!result ? (
             <>

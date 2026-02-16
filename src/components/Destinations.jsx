@@ -105,55 +105,53 @@ export default function Destinations() {
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-gray-900 rounded-3xl max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 overflow-y-auto max-h-[90vh]"
+            className="bg-gray-900 rounded-3xl max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 overflow-y-auto max-h-[85vh] md:max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}>
             {/* Vidéo à gauche */}
-            <div className="relative min-h-[250px] md:min-h-[300px] md:h-full">
+            <div className="relative min-h-[200px] md:min-h-[300px] md:h-full">
               <video autoPlay loop muted playsInline className="w-full h-full object-cover">
                 <source src={selectedDestination.video} type="video/mp4" />
               </video>
             </div>
 
             {/* Contenu à droite */}
-            <div className="p-4 sm:p-6 flex flex-col justify-between">
+            <div className="p-4 sm:p-6 pb-20 md:pb-6">
               <button onClick={() => setSelectedDestination(null)} className="absolute top-4 right-4 bg-black/50 p-2 rounded-full hover:bg-black transition z-10">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
               </button>
 
-              <div>
-                <div className="flex items-center gap-2 mb-2">
-                  <MapPin className="w-4 h-4 text-gold-500" />
-                  <span className="text-gold-500 text-sm font-semibold">{selectedDestination.era}</span>
-                </div>
-                <h3 className="text-3xl font-serif font-bold mb-3">{selectedDestination.name}</h3>
-                <p className="text-gray-300 text-base mb-4 leading-relaxed">{selectedDestination.description}</p>
+              <div className="flex items-center gap-2 mb-2">
+                <MapPin className="w-4 h-4 text-gold-500" />
+                <span className="text-gold-500 text-sm font-semibold">{selectedDestination.era}</span>
+              </div>
+              <h3 className="text-2xl sm:text-3xl font-serif font-bold mb-3">{selectedDestination.name}</h3>
+              <p className="text-gray-300 text-sm sm:text-base mb-4 leading-relaxed">{selectedDestination.description}</p>
 
-                <div className="grid grid-cols-2 gap-3 mb-4">
-                  <div className="glass-effect p-3 rounded-lg">
-                    <Calendar className="w-5 h-5 text-gold-500 mb-1" />
-                    <div className="text-xs text-gray-400">Durée</div>
-                    <div className="text-sm font-bold">{selectedDestination.duration}</div>
-                  </div>
-                  <div className="glass-effect p-3 rounded-lg">
-                    <Users className="w-5 h-5 text-gold-500 mb-1" />
-                    <div className="text-xs text-gray-400">Prix/pers.</div>
-                    <div className="text-sm font-bold">{selectedDestination.price}</div>
-                  </div>
+              <div className="grid grid-cols-2 gap-3 mb-4">
+                <div className="glass-effect p-3 rounded-lg">
+                  <Calendar className="w-5 h-5 text-gold-500 mb-1" />
+                  <div className="text-xs text-gray-400">Durée</div>
+                  <div className="text-sm font-bold">{selectedDestination.duration}</div>
                 </div>
+                <div className="glass-effect p-3 rounded-lg">
+                  <Users className="w-5 h-5 text-gold-500 mb-1" />
+                  <div className="text-xs text-gray-400">Prix/pers.</div>
+                  <div className="text-sm font-bold">{selectedDestination.price}</div>
+                </div>
+              </div>
 
-                <div className="mb-4">
-                  <h4 className="text-sm font-bold mb-2 text-gold-500">Points forts</h4>
-                  <ul className="grid grid-cols-1 gap-2">
-                    {selectedDestination.highlights.map((highlight, i) => (
-                      <li key={i} className="flex items-center gap-2">
-                        <div className="w-1.5 h-1.5 bg-gold-500 rounded-full flex-shrink-0"></div>
-                        <span className="text-gray-300 text-sm">{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+              <div className="mb-6">
+                <h4 className="text-sm font-bold mb-2 text-gold-500">Points forts</h4>
+                <ul className="grid grid-cols-1 gap-2">
+                  {selectedDestination.highlights.map((highlight, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-gold-500 rounded-full flex-shrink-0"></div>
+                      <span className="text-gray-300 text-sm">{highlight}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
 
               <button
@@ -161,7 +159,7 @@ export default function Destinations() {
                   setSelectedDestination(null);
                   document.getElementById("reservation")?.scrollIntoView({ behavior: "smooth" });
                 }}
-                className="w-full bg-gradient-to-r from-gold-500 to-yellow-400 text-black py-3 rounded-full text-base font-bold hover:scale-105 transition-transform">
+                className="w-full bg-gradient-to-r from-gold-500 to-yellow-400 text-black py-3 rounded-full text-sm sm:text-base font-bold hover:scale-105 transition-transform">
                 Réserver maintenant
               </button>
             </div>
