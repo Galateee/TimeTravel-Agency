@@ -77,7 +77,7 @@ export default function Reservation() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="max-w-3xl mx-auto">
-          <form onSubmit={handleSubmit} className="glass-effect rounded-3xl p-8 md:p-12">
+          <form onSubmit={handleSubmit} className="glass-effect rounded-3xl p-4 sm:p-8 md:p-12">
             {/* Destination */}
             <div className="mb-6">
               <label className="block text-sm font-semibold mb-3 text-gold-500">Destination *</label>
@@ -97,11 +97,11 @@ export default function Reservation() {
             </div>
 
             {/* Date et nombre de voyageurs */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
               <div>
-                <label className="flex items-center gap-2 text-sm font-semibold mb-3 text-gold-500">
+                <label className="flex items-center gap-2 text-sm font-semibold mb-2 sm:mb-3 text-gold-500">
                   <Calendar className="w-4 h-4 flex-shrink-0" />
-                  <span>Date de départ *</span>
+                  <span className="text-xs sm:text-sm">Départ *</span>
                 </label>
                 <input
                   type="date"
@@ -115,9 +115,9 @@ export default function Reservation() {
               </div>
 
               <div>
-                <label className="flex items-center gap-2 text-sm font-semibold mb-3 text-gold-500">
+                <label className="flex items-center gap-2 text-sm font-semibold mb-2 sm:mb-3 text-gold-500">
                   <Users className="w-4 h-4 flex-shrink-0" />
-                  <span>Nombre de voyageurs *</span>
+                  <span className="text-xs sm:text-sm">Voyageurs *</span>
                 </label>
                 <select
                   name="travelers"
