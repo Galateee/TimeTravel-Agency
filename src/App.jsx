@@ -26,7 +26,7 @@ function App() {
       {/* Bouton Quiz flottant */}
       <button
         onClick={() => setShowQuiz(true)}
-        className="fixed left-6 bottom-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-40">
+        className="fixed left-4 sm:left-6 bottom-4 sm:bottom-6 bg-gradient-to-r from-purple-600 to-pink-600 text-white p-4 rounded-full shadow-2xl hover:scale-110 transition-transform z-40">
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path
             strokeLinecap="round"

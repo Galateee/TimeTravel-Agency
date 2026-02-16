@@ -89,7 +89,7 @@ export default function ChatBot({ show, onToggle }) {
         whileHover={{ scale: 1.1 }}
         whileTap={{ scale: 0.9 }}
         onClick={onToggle}
-        className="fixed right-6 bottom-6 bg-gradient-to-r from-gold-500 to-yellow-400 text-black p-4 rounded-full shadow-2xl z-40">
+        className="fixed right-4 sm:right-6 bottom-4 sm:bottom-6 bg-gradient-to-r from-gold-500 to-yellow-400 text-black p-4 rounded-full shadow-2xl z-40">
         {show ? <X className="w-6 h-6" /> : <MessageCircle className="w-6 h-6" />}
       </motion.button>
 
@@ -100,7 +100,7 @@ export default function ChatBot({ show, onToggle }) {
             initial={{ opacity: 0, y: 100, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 100, scale: 0.9 }}
-            className="fixed right-6 bottom-24 w-96 h-[600px] bg-gray-900 rounded-2xl shadow-2xl z-40 flex flex-col border border-gold-500/20 overflow-hidden">
+            className="fixed right-2 sm:right-6 bottom-20 sm:bottom-24 w-[calc(100vw-1rem)] sm:w-96 h-[calc(100vh-6rem)] sm:h-[600px] max-h-[600px] bg-gray-900 rounded-2xl shadow-2xl z-40 flex flex-col border border-gold-500/20 overflow-hidden">
             {/* Header */}
             <div className="bg-gradient-to-r from-gold-500 to-yellow-400 p-4 flex items-center gap-3">
               <Bot className="w-8 h-8 text-black" />

@@ -105,17 +105,17 @@ export default function Destinations() {
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="bg-gray-900 rounded-3xl max-w-5xl w-full grid md:grid-cols-2 overflow-hidden max-h-[85vh]"
+            className="bg-gray-900 rounded-3xl max-w-5xl w-full grid grid-cols-1 md:grid-cols-2 overflow-y-auto max-h-[90vh]"
             onClick={(e) => e.stopPropagation()}>
             {/* Vidéo à gauche */}
-            <div className="relative h-full min-h-[300px]">
+            <div className="relative min-h-[250px] md:min-h-[300px] md:h-full">
               <video autoPlay loop muted playsInline className="w-full h-full object-cover">
                 <source src={selectedDestination.video} type="video/mp4" />
               </video>
             </div>
 
             {/* Contenu à droite */}
-            <div className="p-6 flex flex-col justify-between">
+            <div className="p-4 sm:p-6 flex flex-col justify-between">
               <button onClick={() => setSelectedDestination(null)} className="absolute top-4 right-4 bg-black/50 p-2 rounded-full hover:bg-black transition z-10">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

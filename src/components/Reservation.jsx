@@ -97,7 +97,7 @@ export default function Reservation() {
             </div>
 
             {/* Date et nombre de voyageurs */}
-            <div className="grid md:grid-cols-2 gap-6 mb-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
               <div>
                 <label className="block text-sm font-semibold mb-3 text-gold-500">
                   <Calendar className="inline w-4 h-4 mr-2" />

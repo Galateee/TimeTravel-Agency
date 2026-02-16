@@ -110,7 +110,7 @@ export default function Quiz({ show, onClose }) {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
-          className="bg-gradient-to-br from-gray-900 to-black rounded-3xl max-w-2xl w-full p-8 md:p-12 border border-gold-500/20"
+          className="bg-gradient-to-br from-gray-900 to-black rounded-3xl max-w-2xl w-full max-h-[90vh] overflow-y-auto p-6 sm:p-8 md:p-12 border border-gold-500/20"
           onClick={(e) => e.stopPropagation()}>
           {!result ? (
             <>
@@ -160,26 +160,26 @@ export default function Quiz({ show, onClose }) {
             </>
           ) : (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
-              <Sparkles className="w-16 h-16 text-gold-500 mx-auto mb-6" />
-              <h2 className="text-4xl font-serif font-bold mb-4">Votre destination idéale :</h2>
-              <h3 className={`text-5xl font-bold mb-8 bg-gradient-to-r ${result.color} bg-clip-text text-transparent`}>{result.name}</h3>
+              <Sparkles className="w-12 h-12 sm:w-16 sm:h-16 text-gold-500 mx-auto mb-4 sm:mb-6" />
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-bold mb-3 sm:mb-4">Votre destination idéale :</h2>
+              <h3 className={`text-3xl sm:text-4xl md:text-5xl font-bold mb-6 sm:mb-8 bg-gradient-to-r ${result.color} bg-clip-text text-transparent`}>{result.name}</h3>
 
-              <div className="mb-8 rounded-2xl overflow-hidden">
-                <img src={result.image} alt={result.name} className="w-full h-64 object-cover" />
+              <div className="mb-6 sm:mb-8 rounded-2xl overflow-hidden">
+                <img src={result.image} alt={result.name} className="w-full h-48 sm:h-64 object-cover" />
               </div>
 
-              <p className="text-lg text-gray-300 mb-8 leading-relaxed">{result.description}</p>
+              <p className="text-base sm:text-lg text-gray-300 mb-6 sm:mb-8 leading-relaxed">{result.description}</p>
 
-              <div className="flex gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
                 <button
                   onClick={() => {
                     onClose();
                     document.getElementById("reservation")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="flex-1 bg-gradient-to-r from-gold-500 to-yellow-400 text-black py-4 rounded-full font-bold hover:scale-105 transition-transform">
+                  className="flex-1 bg-gradient-to-r from-gold-500 to-yellow-400 text-black py-3 sm:py-4 rounded-full font-bold hover:scale-105 transition-transform">
                   Réserver maintenant
                 </button>
-                <button onClick={reset} className="flex-1 glass-effect py-4 rounded-full font-bold hover:bg-white/10 transition">
+                <button onClick={reset} className="flex-1 glass-effect py-3 sm:py-4 rounded-full font-bold hover:bg-white/10 transition">
                   Recommencer
                 </button>
               </div>
