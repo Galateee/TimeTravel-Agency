@@ -110,7 +110,7 @@ export default function Quiz({ show, onClose }) {
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
-          className="bg-gradient-to-br from-gray-900 to-black rounded-3xl max-w-2xl w-full max-h-[80vh] overflow-hidden p-4 sm:p-8 md:p-12 border border-gold-500/20 flex flex-col"
+          className="bg-gradient-to-br from-gray-900 to-black rounded-3xl max-w-2xl w-full max-h-[85vh] overflow-y-auto scrollbar-hide p-4 sm:p-8 md:p-12 border border-gold-500/20"
           onClick={(e) => e.stopPropagation()}>
           {!result ? (
             <>
@@ -147,8 +147,8 @@ export default function Quiz({ show, onClose }) {
                   {questions[currentQuestion].options.map((option, index) => (
                     <motion.button
                       key={index}
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
+                      whileHover={{ scale: 1.01 }}
+                      whileTap={{ scale: 0.99 }}
                       onClick={() => handleAnswer(option)}
                       className="w-full glass-effect p-5 rounded-xl text-left hover:bg-white/10 transition-all group flex items-center justify-between">
                       <span className="text-lg">{option.text}</span>
@@ -159,24 +159,24 @@ export default function Quiz({ show, onClose }) {
               </motion.div>
             </>
           ) : (
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center flex flex-col h-full">
-              <Sparkles className="w-10 h-10 sm:w-16 sm:h-16 text-gold-500 mx-auto mb-2 sm:mb-6" />
-              <h2 className="text-xl sm:text-3xl md:text-4xl font-serif font-bold mb-2 sm:mb-4">Votre destination idéale :</h2>
-              <h3 className={`text-2xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-8 bg-gradient-to-r ${result.color} bg-clip-text text-transparent`}>{result.name}</h3>
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center">
+              <Sparkles className="w-10 h-10 sm:w-16 sm:h-16 text-gold-500 mx-auto mb-2 sm:mb-4" />
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold mb-2 sm:mb-3">Votre destination idéale :</h2>
+              <h3 className={`text-2xl sm:text-3xl md:text-4xl font-bold mb-3 sm:mb-6 bg-gradient-to-r ${result.color} bg-clip-text text-transparent`}>{result.name}</h3>
 
-              <div className="mb-3 sm:mb-8 rounded-2xl overflow-hidden flex-shrink-0">
-                <img src={result.image} alt={result.name} className="w-full h-32 sm:h-64 object-cover" />
+              <div className="mb-3 sm:mb-6 rounded-2xl overflow-hidden">
+                <img src={result.image} alt={result.name} className="w-full h-28 sm:h-56 object-cover" />
               </div>
 
-              <p className="text-sm sm:text-lg text-gray-300 mb-4 sm:mb-8 leading-relaxed">{result.description}</p>
+              <p className="text-xs sm:text-base text-gray-300 mb-4 sm:mb-6 leading-relaxed">{result.description}</p>
 
-              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 mt-auto">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                 <button
                   onClick={() => {
                     onClose();
                     document.getElementById("reservation")?.scrollIntoView({ behavior: "smooth" });
                   }}
-                  className="flex-1 bg-gradient-to-r from-gold-500 to-yellow-400 text-black py-3 sm:py-4 rounded-full font-bold hover:scale-105 transition-transform">
+                  className="flex-1 bg-gradient-to-r from-gold-500 to-yellow-400 text-black py-3 sm:py-4 rounded-full font-bold hover:scale-[1.02] transition-transform">
                   Réserver maintenant
                 </button>
                 <button onClick={reset} className="flex-1 glass-effect py-3 sm:py-4 rounded-full font-bold hover:bg-white/10 transition">

@@ -115,7 +115,7 @@ export default function Destinations() {
             </div>
 
             {/* Contenu à droite */}
-            <div className="p-4 sm:p-6 flex flex-col overflow-y-auto">
+            <div className="p-4 sm:p-6 flex flex-col overflow-y-auto scrollbar-hide">
               <button onClick={() => setSelectedDestination(null)} className="absolute top-4 right-4 bg-black/50 p-2 rounded-full hover:bg-black transition z-10">
                 <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

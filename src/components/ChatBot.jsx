@@ -114,7 +114,7 @@ export default function ChatBot({ show, onToggle }) {
             </div>
 
             {/* Messages */}
-            <div className="flex-1 overflow-y-auto p-4 space-y-4">
+            <div className="flex-1 overflow-y-auto scrollbar-hide p-4 space-y-4">
               {messages.map((msg, index) => (
                 <motion.div key={index} initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
                   <div className={`max-w-[80%] p-3 rounded-2xl ${msg.role === "user" ? "bg-gradient-to-r from-gold-500 to-yellow-400 text-black" : "bg-gray-800 text-white"}`}>
