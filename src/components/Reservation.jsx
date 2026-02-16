@@ -77,7 +77,7 @@ export default function Reservation() {
         </motion.div>
 
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} viewport={{ once: true }} className="max-w-3xl mx-auto">
-          <form onSubmit={handleSubmit} className="glass-effect rounded-3xl p-4 sm:p-8 md:p-12">
+          <form onSubmit={handleSubmit} className="glass-effect rounded-3xl p-6 sm:p-8 md:p-12">
             {/* Destination */}
             <div className="mb-6">
               <label className="block text-sm font-semibold mb-3 text-gold-500">Destination *</label>
@@ -86,7 +86,8 @@ export default function Reservation() {
                 value={formData.destination}
                 onChange={handleChange}
                 required
-                className="w-full bg-gray-800 text-white px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500">
+                className="w-full bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm cursor-pointer"
+                style={{ paddingRight: "2.5rem" }}>
                 <option value="">Sélectionnez votre destination</option>
                 {destinations.map((dest) => (
                   <option key={dest.id} value={dest.id}>
@@ -99,10 +100,7 @@ export default function Reservation() {
             {/* Date et nombre de voyageurs */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mb-6">
               <div>
-                <label className="flex items-center gap-2 text-sm font-semibold mb-2 sm:mb-3 text-gold-500">
-                  <Calendar className="w-4 h-4 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm">Départ *</span>
-                </label>
+                <label className="block text-xs sm:text-sm font-semibold mb-2 text-gold-500">Départ *</label>
                 <input
                   type="date"
                   name="departureDate"
@@ -110,21 +108,20 @@ export default function Reservation() {
                   onChange={handleChange}
                   required
                   min={new Date().toISOString().split("T")[0]}
-                  className="w-full bg-gray-800 text-white px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500"
+                  className="w-full bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm [color-scheme:dark] cursor-pointer"
+                  style={{ colorScheme: "dark" }}
                 />
               </div>
 
               <div>
-                <label className="flex items-center gap-2 text-sm font-semibold mb-2 sm:mb-3 text-gold-500">
-                  <Users className="w-4 h-4 flex-shrink-0" />
-                  <span className="text-xs sm:text-sm">Voyageurs *</span>
-                </label>
+                <label className="block text-xs sm:text-sm font-semibold mb-2 text-gold-500">Voyageurs *</label>
                 <select
                   name="travelers"
                   value={formData.travelers}
                   onChange={handleChange}
                   required
-                  className="w-full bg-gray-800 text-white px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500">
+                  className="w-full bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm cursor-pointer"
+                  style={{ paddingRight: "2.5rem" }}>
                   {[1, 2, 3, 4, 5, 6].map((num) => (
                     <option key={num} value={num}>
                       {num} {num > 1 ? "personnes" : "personne"}
@@ -148,7 +145,7 @@ export default function Reservation() {
                   onChange={handleChange}
                   required
                   placeholder="Jean"
-                  className="w-full bg-gray-800 text-white px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500"
+                  className="w-full bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm"
                 />
               </div>
 
@@ -164,7 +161,7 @@ export default function Reservation() {
                   onChange={handleChange}
                   required
                   placeholder="Dupont"
-                  className="w-full bg-gray-800 text-white px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500"
+                  className="w-full bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm"
                 />
               </div>
             </div>
@@ -183,7 +180,7 @@ export default function Reservation() {
                   onChange={handleChange}
                   required
                   placeholder="jean.dupont@email.com"
-                  className="w-full bg-gray-800 text-white px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500"
+                  className="w-full bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm"
                 />
               </div>
 
@@ -199,7 +196,7 @@ export default function Reservation() {
                   onChange={handleChange}
                   required
                   placeholder="+33 6 12 34 56 78"
-                  className="w-full bg-gray-800 text-white px-4 py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500"
+                  className="w-full bg-gray-800 text-white px-3 py-3 sm:px-4 sm:py-4 rounded-xl focus:outline-none focus:ring-2 focus:ring-gold-500 text-sm"
                 />
               </div>
             </div>
